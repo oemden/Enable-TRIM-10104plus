@@ -5,6 +5,9 @@ This is great but it require a user input (twice).
 
 This will allow to enable trim on non-Apple SSD without user interaction.
 
+The script will precheck if Any SSD exists, if TRIM support is enabled - or not - to determine if it has to be runned or aborted.
+
+
 ### usage
 
 Either edit the script file `create_enabletrim10104plus_pkg.sh`
@@ -31,10 +34,6 @@ or just run from the command line
 1. Apple Warns you that you enable TRIM at your own risks ! And 
 you shoudl BACKUP your DATAS before running thw script or pkg.
 1. The system will reboot with no warning once done ! SO BEWARE if you deploy this with munki or ARD also note Payload free pkg does not leave receipts so it may run in loop if used with munki until you add preflight scripts to check if TRIM is already enabled... 
-
-##TODOs
-
-Check if TRIM is allready enabled with preflight script !!!
 
 
 
