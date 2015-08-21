@@ -23,7 +23,7 @@ and then run it to create a pkg, that you will then deploy from ARD, munki or an
 	pkgbuild: Wrote package to enabletrim10104plus.pkg
 
 
-or simply use the script `enableTrim10104plus.sh` in the script folder from ARD.
+or simply use the script `postinstall` in the script folder from ARD.
 
 or just run from the command line
 
