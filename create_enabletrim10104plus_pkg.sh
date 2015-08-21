@@ -22,6 +22,6 @@ mkdir empty
 #pkgbuild --nopayload --scripts scripts --identifier "$pkg_identifier" --version "$version" "$pkg_name"
 pkgbuild --root empty --scripts scripts --identifier "$pkg_identifier" --version "$version" "$pkg_name"
 
-rm ./empty
+rm -Rf ./empty
 
 exit 0

@@ -29,6 +29,8 @@ or just run from the command line
 
 	pkgbuild --nopayload --scripts scripts --identifier com.enabletrim.example.com enabletrim.pkg
 
+if you want payload free pkg or look at the script `create_enabletrim10104plus_pkg.sh` if you want a receipt and version.
+
 ##Important Note :
 
 1. Apple Warns you that you enable TRIM at your own risks ! And 
