@@ -1,11 +1,11 @@
 #!/bin/bash
 ## oem at oemden dot com
-## Enable TRIM on Os 10.10.4
-# v0.4
+## Enable TRIM on Os 10.10.4+ & 10.11.x
+# v0.5
 # First checks Os Version
 # Now Checks any existing disks to find SSD(s)
 # And verify Trim is not yet enabled
-# not tested on 10.11.x but it should work
+# tested on 10.11.x 
 
 # Either run in from ARD or embeded if in a payload free pkg
 
@@ -57,8 +57,8 @@ elif [[ "$isSSD" != "1" ]] ; then
 	echo " == Exiting Now =="
 	exit 1
 # could be else statement but I prefer to add conditions anyway
-elif [[ "$SystemOSMinor" -ge "10" ]] && [[ "$SystemOSPoint" -ge "4" ]] && [[ "$isSSD" == "1" ]] && [[ "$trim_enabled" == "0" ]] ; then
-#else
+#elif [[ "$SystemOSMinor" -ge "10" ]] && [[ "$SystemOSPoint" -ge "4" ]] && [[ "$isSSD" == "1" ]] && [[ "$trim_enabled" == "0" ]] || [[ "$SystemOSMinor" -ge "11" ]] ; then
+else #ok let's keep it simple...
 	echo " == Disk is Solid State, Os is $SystemOS and TRIM is not enabled =="
 	echo " == Enabling TRIM == "
 	##create stdin tmp input file
